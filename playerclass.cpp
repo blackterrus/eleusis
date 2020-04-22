@@ -19,18 +19,17 @@ class player{
   public:
   
     //getter: used to place the data where it needs to go.
-	const toHand(const card_transfer)
+	const toHand(const &card_transfer)
 	{
-	  player_hand = card_transfer;
+	  player_hand = &card_transfer;
 	};
 	
 	//setter: used to initialize a vector or other data structure with data
 	void fromDeck(std::vector<transfer*> const &card_transfer)
 	{
 	  for (int i=0; i<=14; i++) 
-	  {    
-        card_transfer.push_back(deck_[i]) 
-	  };
+	    card_transfer.push_back(deck_[i]) 
+	};
 	
 	
 	player(); //constructor needs to build the player's hand
